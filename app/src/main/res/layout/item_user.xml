@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="Name: "
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/nameValueTextView"
+            app:layout_constraintTop_toTopOf="@id/nameLabel"
+            app:layout_constraintStart_toEndOf="@id/nameLabel"
+            tools:text="Name"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="Surname: "
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/nameLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/surnameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/surnameValueTextView"
+            app:layout_constraintTop_toTopOf="@id/surnameLabel"
+            app:layout_constraintStart_toEndOf="@id/surnameLabel"
+            tools:text="Surname"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="Age: "
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/surnameLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/ageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/ageValueTextView"
+            app:layout_constraintTop_toTopOf="@id/ageLabel"
+            app:layout_constraintStart_toEndOf="@id/ageLabel"
+            tools:text="100"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <View
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee"/>
+
+
+</android.support.constraint.ConstraintLayout>
