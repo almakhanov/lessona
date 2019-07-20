@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), UserAdaprer.MyClickListener {
 
-    lateinit var list: List<User>
+    private var list: List<User>? = null
     private val gson = Gson()
     private var adapter = UserAdaprer()
 

@@ -36,7 +36,7 @@ class UserAdaprer : RecyclerView.Adapter<UserAdaprer.UserViewHolder>(){
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(item: User){
             itemView.nameValueTextView.text = item.name
-            itemView.surnameValueTextView.text = item.name
+            itemView.surnameValueTextView.text = item.surname
             itemView.ageValueTextView.text = item.age.toString()
         }
 
