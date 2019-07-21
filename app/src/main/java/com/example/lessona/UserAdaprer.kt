@@ -8,10 +8,10 @@ import kotlinx.android.synthetic.main.item_user.view.*
 
 class UserAdaprer : RecyclerView.Adapter<UserAdaprer.UserViewHolder>(){
 
-    private var dataSet = ArrayList<User>()
+    private var dataSet = ArrayList<Post>()
     private var listener: MyClickListener? = null
 
-    fun setDataSet(list: ArrayList<User>){
+    fun setDataSet(list: ArrayList<Post>){
         dataSet = list
         this.notifyDataSetChanged()
     }
@@ -34,10 +34,10 @@ class UserAdaprer : RecyclerView.Adapter<UserAdaprer.UserViewHolder>(){
 
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun bind(item: User){
-            itemView.nameValueTextView.text = item.name
-            itemView.surnameValueTextView.text = item.surname
-            itemView.ageValueTextView.text = item.age.toString()
+        fun bind(item: Post){
+            itemView.nameValueTextView.text = item.title
+            itemView.surnameValueTextView.text = item.body
+            itemView.ageValueTextView.text = item.userId.toString()
         }
 
         init {
@@ -48,6 +48,6 @@ class UserAdaprer : RecyclerView.Adapter<UserAdaprer.UserViewHolder>(){
     }
 
     interface MyClickListener{
-        fun onClick(item: User)
+        fun onClick(item: Post)
     }
 }
