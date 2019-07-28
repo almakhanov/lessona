@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity(), UserAdaprer.MyClickListener {
         viewModel.postLivaData.observe(this, Observer<List<Post>> {
             adapter.setDataSet(it as ArrayList<Post>)
         })
+
+
+        viewModel.errorLiveData.observe(this, Observer<String> {
+            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+        })
     }
 
     override fun onClick(item: Post) {
