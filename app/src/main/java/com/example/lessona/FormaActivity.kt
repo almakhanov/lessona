@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_form.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.android.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,6 +18,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class FormaActivity : AppCompatActivity() {
 
+
+    private val api: Api by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +34,7 @@ class FormaActivity : AppCompatActivity() {
                 userId = ageEditText.text.toString().toInt()
             )
 
-            getService().addPost(post).enqueue(object: Callback<Post>{
+            api.addPost(post).enqueue(object: Callback<Post>{
                 override fun onFailure(call: Call<Post>, t: Throwable) {
                     Toast.makeText(this@FormaActivity, t.message, Toast.LENGTH_LONG).show()
                 }
@@ -46,25 +49,5 @@ class FormaActivity : AppCompatActivity() {
             finish()
         }
 
-    }
-
-
-    fun createOkHttpClient(): OkHttpClient {
-        val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
-            this.level = HttpLoggingInterceptor.Level.BODY
-        }
-        val okHttpBuilder = OkHttpClient.Builder()
-            .addInterceptor(httpLoggingInterceptor)
-        return okHttpBuilder.build()
-    }
-
-
-    private fun getService(): Api {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com")
-            .client(createOkHttpClient())
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        return retrofit.create(Api::class.java)
     }
 }
