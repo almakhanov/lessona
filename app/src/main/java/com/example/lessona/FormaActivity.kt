@@ -22,9 +22,6 @@ class FormaActivity : AppCompatActivity() {
         btnSave.setOnClickListener{
             saveToFirebase()
         }
-
-
-
     }
 
     private fun saveToFirebase(){
