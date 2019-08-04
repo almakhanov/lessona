@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "715074538955",
+    "firebase_url": "https://lessona-bc4b7.firebaseio.com",
+    "project_id": "lessona-bc4b7",
+    "storage_bucket": "lessona-bc4b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715074538955:android:455e0d43f771aff5",
+        "android_client_info": {
+          "package_name": "com.example.lessona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715074538955-kf3liir6vv9c4n9ir855a5krgbi2vili.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_uWQBLwQjWZcpHAfLNe-3PwjYyujlLuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715074538955-kf3liir6vv9c4n9ir855a5krgbi2vili.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

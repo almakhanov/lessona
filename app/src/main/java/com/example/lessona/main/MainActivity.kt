@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), UserAdaprer.MyClickListener {
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mRecyclerView.adapter = adapter
 
-        viewModel.getPosts()
+        viewModel.getPostsFromFirebase()
 
         fab.setOnClickListener {
             startActivity(Intent(this, FormaActivity::class.java))

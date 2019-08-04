@@ -1,8 +1,10 @@
 package com.example.lessona
 
-data class Post(
+class Post(
     val body: String?,
-    val id: Int?,
+    var id: String?,
     val title: String?,
     val userId: Int?
-)
+){
+    constructor() : this("", "", "", 0)
+}
